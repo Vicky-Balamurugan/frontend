@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - CACD Platform</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <header class="flex justify-between items-center p-4 bg-white shadow-md mb-4">
+        <h1 class="text-2xl font-bold text-gray-700">Settings</h1>
+        <a href="index.html" class="text-gray-700 hover:text-gray-900 transition duration-300">Back to Main Page</a>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4">
+        <section class="rounded-lg bg-white shadow-md p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">User Profile</h2>
+            <!-- User profile content goes here -->
+        </section>
+
+        <section class="rounded-lg bg-white shadow-md p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Projects List</h2>
+            <!-- Projects list content goes here -->
+        </section>
+
+        <section class="rounded-lg bg-white shadow-md p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">General Settings</h2>
+            <!-- General settings content goes here -->
+        </section>
+
+        <section class="rounded-lg bg-white shadow-md p-6 mb-8">
+            <h2 class="text-xl font-semibold mb-4">Theme</h2>
+            <div class="flex items-center space-x-4">
+                <button id="lightThemeBtn" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-300">Light Theme</button>
+                <button id="darkThemeBtn" class="bg-gray-800 text-gray-100 px-4 py-2 rounded-md hover:bg-gray-700 transition duration-300">Dark Theme</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Theme changing functionality
+        const lightThemeBtn = document.getElementById('lightThemeBtn');
+        const darkThemeBtn = document.getElementById('darkThemeBtn');
+        const body = document.body;
+
+        lightThemeBtn.addEventListener('click', () => {
+            body.classList.remove('dark');
+        });
+
+        darkThemeBtn.addEventListener('click', () => {
+            body.classList.add('dark');
+        });
+    </script>
+</body>
+</html>
